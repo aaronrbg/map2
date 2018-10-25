@@ -18,11 +18,19 @@ var words = ["ground", "control", "to", "major", "tom"];
 //do something to each element
 //push element to new array
 
+// function myMap(input, cb) {
+//   var output = [];
+//   for (i = 0; i < input.length; i++) {
+//     output.push(cb(input[i]));
+//   }
+//   return output;
+// }
+
 function myMap(input, cb) {
   var output = [];
-  for (i = 0; i < input.length; i++) {
-    output.push(cb(input[i]));
-  }
+  input.forEach(function(word, i){
+    output.push(cb(word));
+  })
   return output;
 }
 
